@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9">
+
+    <com.example.javagps4gbs.items.BuildingMapNavigatorView
+        android:id="@+id/navMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="160dp"/>
+
+
+
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top|end"
+        android:layout_margin="12dp"
+        android:background="#AAFFFFFF"
+        android:padding="8dp"
+        android:elevation="6dp">
+
+        <TextView android:id="@+id/tvFloorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Floor 1"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="6dp"/>
+
+        <Button android:id="@+id/btnFloorUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▲"
+            android:backgroundTint="#C9D6FF"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button android:id="@+id/btnFloorDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▼"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#C9D6FF"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controlPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="#E9EDF2"
+        android:padding="8dp"
+        android:elevation="8dp">
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Navigation Info"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="4dp">
+
+            <Button
+                android:id="@+id/btnSelectSource"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Select Source"
+                android:backgroundTint="#C9D6FF"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSelectDest"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Select Destination"
+                android:layout_marginHorizontal="6dp"
+                android:backgroundTint="#C9D6FF"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnStartNav"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Start Nav"
+                android:backgroundTint="#B2E0B2"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnNextNode"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Next Node"
+                android:backgroundTint="#E1F5C4"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnEndNav"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="End Nav"
+                android:layout_marginHorizontal="6dp"
+                android:backgroundTint="#FFD1D1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
